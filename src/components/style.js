@@ -320,7 +320,6 @@ export const GridImagesWrapper = styled.img.attrs({
     object-fit: cover;
     &:nth-child(1) {
         grid-column-start: span 2;
-        opacity: 0.4;
     }
 `
 
@@ -334,12 +333,10 @@ export const VideoTag = styled.video.attrs({
     object-fit: cover;
     &:nth-child(1) {
         grid-column-start: span 2;
-        opacity: 0.4;
     }
 
     &:nth-child(2) {
         grid-row-start: span 2;
-        opacity: 0.4;
         max-height: 100%;
     }
 `

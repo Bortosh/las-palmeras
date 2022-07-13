@@ -3,24 +3,24 @@ import { appContext } from '../../context'
 import { ModalBackground, ModalWrapper, ModalImg } from '../style'
 
 export function Modal() {
-  const { carruselImages, showModal, index, effects: { setShowModal } } = useContext(appContext)
+	const { carruselImages, showModal, index, effects: { setShowModal } } = useContext(appContext)
 
-  const handleClose = () => setShowModal(false)
+	const handleClose = () => setShowModal(false)
 
-  const [imgToShow, setImgToShow] = useState(false)
+	const [imgToShow, setImgToShow] = useState(false)
 
-  useEffect(() => {
-    setImgToShow(carruselImages[index])
-  }, [carruselImages, index, showModal])
+	useEffect(() => {
+		setImgToShow(carruselImages[index])
+	}, [carruselImages, index, showModal])
 
-  return (
-    showModal && (
-      <>
-        <ModalBackground onClick={handleClose} />
-        <ModalWrapper>
-          <ModalImg src={imgToShow} />
-        </ModalWrapper>
-      </>
-    )
-  )
+	return (
+		showModal && (
+			<>
+				<ModalBackground onClick={handleClose} />
+				<ModalWrapper>
+					<ModalImg src={imgToShow} />
+				</ModalWrapper>
+			</>
+		)
+	)
 }

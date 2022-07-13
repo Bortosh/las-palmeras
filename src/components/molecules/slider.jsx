@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { CardImg } from '../atoms'
 import { appContext } from '../../context'
 import { SliderCounter, WrapperSlider } from '../style'
@@ -11,7 +11,12 @@ export const Slider = () => {
 
   const handleOpen = () => setShowModal(true)
 
-  setTimeout(() => handleNext(), 10000);
+  
+
+  useEffect(() => {
+    const timer = setTimeout(() => handleNext(), 5000);
+    return () => clearTimeout(timer)
+  }, [])
 
   const prevIndex = index ? index - 1 : spritesLength - 1
   const nextIndex = index === spritesLength - 1 ? 0 : index + 1
