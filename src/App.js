@@ -1,15 +1,19 @@
 import React from 'react'
-import { Modal, Main, About, Contact } from './components/molecules';
-
+import { Whatsapp, Map } from './components/atoms';
+import { Modal, Main, About, Footer, GridImages } from './components/objects';
+import { ContextProvider } from './context';
 
 function App() {
   return (
-    <>
+    <ContextProvider>
       <Main />
       <About />
-      <Contact />
+      <GridImages />
+      <Map />
+      <Footer />
+      <Whatsapp />
       <Modal />
-    </>
+    </ContextProvider>
   );
 }
 
