@@ -9,6 +9,7 @@ export const ContextProvider = ({children}) => {
 
     const [locale, setLocale] = useState(defaultLang || 'es')
     const [index, setIndex] = useState(0)
+    const [showModal, setShowModal] = useState(false)
 
     useEffect(() => {!defaultLang && setDefaultLang('es')} ,[])
 
@@ -36,7 +37,8 @@ export const ContextProvider = ({children}) => {
     const effects = () => ({
         setLanguage,
         getAssets,
-        setIndex
+        setIndex,
+        setShowModal
     })
 
     const state = {
@@ -45,6 +47,7 @@ export const ContextProvider = ({children}) => {
         spritesLength: carruselImages.length,
         carruselImages,
         index,
+        showModal,
         effects: {
             ...effects()
         }

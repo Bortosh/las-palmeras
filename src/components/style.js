@@ -108,7 +108,6 @@ export const SliderEdges = styled.div.attrs({
     className:'| SliderEdges |'
 })`
     position: absolute;
-    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -117,16 +116,15 @@ export const SliderEdges = styled.div.attrs({
     user-select: none;
     transition: all 1s ease;
     z-index: 200;
+    padding: 0.5rem;
     opacity: 0;
     &:first-of-type {
         justify-content: flex-start;
         left: 0;
-        padding-left: 1rem;
     }
     &:last-of-type {
         justify-content: flex-end;
         right: 0;
-        padding-right: 1rem;
     }
 `
 export const SliderCounter = styled.span.attrs({
@@ -181,6 +179,14 @@ export const SliderImg = styled.img.attrs({
     object-fit: cover;
     z-index: 100;
     width: 100%;
+    opacity: 0.4;
+        &:first-of-type {
+            background-color: red;
+        }
+        &:last-of-type {
+            background-color: blue;
+        }
+    }
 `
 
 export const SliderBtn = styled.button.attrs({
@@ -259,16 +265,23 @@ export const ModalWrapper = styled.div.attrs({
     className:'| ModalWrapper |'
 })`
     position: fixed;
-    width: 100%;
-    max-width: 600px;
-    height: 100%;
-    max-height: 400px;
-    background-color: #2F3033;
+    width: 90%;
+    height: 90%;
+    background-color: #2F303370;
     z-index: 1200;
     bottom: 50%;
     transform: translateY(50%);
     border-radius: 4px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    overflow: hidden;
+`
+
+export const ModalImg = styled.img.attrs({
+    className:'| ModalImg |'
+})`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `
 
 
