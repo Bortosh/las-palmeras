@@ -1,28 +1,30 @@
-import React, { useContext, useState } from 'react'
-import { NextPrev, CardImg } from '../atoms'
+import React, { useContext } from 'react'
+import { CardImg } from '../atoms'
 import { appContext } from '../../context'
 import { SliderCounter, WrapperSlider } from '../style'
 
 export const Slider = () => {
-    const { spritesLength, index, effects: { setIndex, setShowModal } } = useContext(appContext)
+  const { spritesLength, index, effects: { setIndex, setShowModal } } = useContext(appContext)
 
-    const handleNext = () => index + 1 === spritesLength ? setIndex(0) : setIndex(index + 1)
-    const handlePrev = () => index ? setIndex(index - 1) : setIndex(spritesLength - 1)
+  const handleNext = () => index + 1 === spritesLength ? setIndex(0) : setIndex(index + 1)
+  const handlePrev = () => index ? setIndex(index - 1) : setIndex(spritesLength - 1)
 
-    const handleOpen = () => setShowModal(true)
+  const handleOpen = () => setShowModal(true)
 
-    const prevIndex = index ? index - 1 : spritesLength - 1
-    const nextIndex = index === spritesLength - 1 ? 0 : index + 1
-    const counterText = index + 1 + " / " + spritesLength
+  setTimeout(() => handleNext(), 10000);
 
-    return (
-        <WrapperSlider>
-            <CardImg index={ prevIndex } onClick={ handlePrev } />
-            <CardImg index={ index } onClick={ handleOpen } />
-            <CardImg index={ nextIndex } onClick={ handleNext } />
-            <SliderCounter>
-                { counterText }
-            </SliderCounter>
-        </WrapperSlider>
-    )
+  const prevIndex = index ? index - 1 : spritesLength - 1
+  const nextIndex = index === spritesLength - 1 ? 0 : index + 1
+  const counterText = index + 1 + " / " + spritesLength
+
+  return (
+    <WrapperSlider>
+      <CardImg index={prevIndex} onClick={handlePrev} />
+      <CardImg index={index} onClick={handleOpen} />
+      <CardImg index={nextIndex} onClick={handleNext} />
+      <SliderCounter>
+        {counterText}
+      </SliderCounter>
+    </WrapperSlider>
+  )
 }
