@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.831df05b.css",
+    "main.js": "/static/js/main.c29d49b2.js",
+    "static/media/video2.mp4": "/static/media/video2.3ef9fb54db041586fd4d.mp4",
+    "static/media/video3.mp4": "/static/media/video3.e3f9efea630cff8e37b9.mp4",
+    "static/media/video1.mp4": "/static/media/video1.07218d67af54d33b711b.mp4",
+    "static/media/video4.mp4": "/static/media/video4.80004e1ec6e41c9b2ecb.mp4",
+    "static/media/patio1.jpeg": "/static/media/patio1.71c263401097351786e8.jpeg",
+    "static/media/piscina.jpeg": "/static/media/piscina.c99f8aabe4cf47ac2870.jpeg",
+    "static/media/cocina1.jpeg": "/static/media/cocina1.4c43e48dbd0ee8ba6335.jpeg",
+    "static/media/cocina2.jpeg": "/static/media/cocina2.76860a330133a88a8d4b.jpeg",
+    "static/media/palms_white.png": "/static/media/palms_white.2f3d3eeb7a20fc329450.png",
+    "static/media/palms_black.png": "/static/media/palms_black.a9eb9ea89aa38f65f474.png",
+    "index.html": "/index.html",
+    "main.831df05b.css.map": "/static/css/main.831df05b.css.map",
+    "main.c29d49b2.js.map": "/static/js/main.c29d49b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.831df05b.css",
+    "static/js/main.c29d49b2.js"
+  ]
+}
