@@ -15,6 +15,7 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  scroll-behavior: smooth;
 }
 
 /* Sections
@@ -358,4 +359,15 @@ template {
 
 [hidden] {
   display: none;
+}
+
+.theme {
+	opacity: 0;
+    visibility: hidden;
+
+	&--animation {
+		opacity: 1 !important;
+		transition: all 500ms linear;
+		visibility: visible !important;
+	}
 }
