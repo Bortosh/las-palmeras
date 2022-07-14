@@ -46,7 +46,7 @@ export function Main() {
                 isSearchable={false}
               />
             </SelectWrapper>
-            {/* <ThemeButton /> */}
+            <ThemeButton />
           </MainBar>
         </NavBar>
       </MainWrapper>

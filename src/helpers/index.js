@@ -4,15 +4,16 @@ export function getTheme() {
 
 export function setTheme(newTheme) {
   localStorage.setItem('color-theme', newTheme)
-  document.documentElement.setAttribute('data-color-theme', newTheme)
+  document.documentElement?.setAttribute('data-color-theme', newTheme)
 }
 
 export function fadeInAnimation() {
   const theme = document.getElementById('theme')
-
-  theme.classList.remove('theme--animation')
-  setTimeout(() => theme.classList.add('theme--animation'), 300)
+  
+  theme.classList?.remove('theme--animation')
+  setTimeout(() => theme.classList?.add('theme--animation'), 300)
 }
+
 
 export function toogleTheme() {
   const newTheme = getTheme() === 'dark' ? 'light' : 'dark'

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { appContext } from '../../context'
 import { MapWrapper } from "../style";
 
@@ -8,6 +8,7 @@ export const Map = () => {
 
   return (
     <MapWrapper
+      data-aos="fade-right"
       id={menu[1]}
       src={coords}
       frameborder="0"

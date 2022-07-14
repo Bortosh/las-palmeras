@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { appContext } from '../../context'
-import { GridImagesWrapper, GridWrapper, VideoTag } from '../style'
+import { GridWrapper, VideoTag } from '../style'
 import video1 from '../../assets/videos/video1.mp4'
 import video2 from '../../assets/videos/video2.mp4'
 import video3 from '../../assets/videos/video3.mp4'
