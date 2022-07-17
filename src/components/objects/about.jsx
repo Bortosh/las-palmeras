@@ -6,7 +6,7 @@ export function About() {
   const { language: { menu, description, titles } } = useContext(appContext)
   return (
     <WrapperAbout id={menu[0]}
-        data-aos="fade-right"
+        data-aos="fade-left"
         data-aos-offset="200"
         data-aos-delay="50"
         data-aos-duration="1000"
