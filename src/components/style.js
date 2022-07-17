@@ -355,7 +355,7 @@ export const ModalWrapper = styled.div.attrs({
   className: '| ModalWrapper |'
 })`
     position: fixed;
-    width: 90%;
+    width: 60%;
     height: 90%;
     background-color: #2F303370;
     z-index: 1200;
@@ -474,4 +474,21 @@ export const SelectWrapper = styled.div.attrs({
             font-size: 1.5rem;
         }
     }
+`
+
+export const TextDescriptivo = styled.h2.attrs({
+  className: '| TextDescriptivo |'
+})`
+  color: #f2f2f2;
+  border-bottom: 1px solid #1c0d02;
+  margin-bottom: -30px;
+  padding-top: 120px;
+`
+
+export const Direccion = styled.h2.attrs({
+  className: '| Direccion |'
+})`
+  margin-top: 0px;
+  padding-bottom: 20px;
+  color: #f2f2f2;
 `

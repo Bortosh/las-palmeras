@@ -1,27 +1,31 @@
 import React, { useContext } from 'react'
 import { appContext } from '../../context'
-import { GridWrapper, VideoTag } from '../style'
-import video1 from '../../assets/videos/video1.mp4'
+import { GridWrapper, VideoTag, TextDescriptivo } from '../style'
+import video7 from '../../assets/videos/video7.mp4'
 import video2 from '../../assets/videos/video2.mp4'
-import video3 from '../../assets/videos/video3.mp4'
-import video4 from '../../assets/videos/video4.mp4'
+// import video3 from '../../assets/videos/video3.mp4'
+import video6 from '../../assets/videos/video6.mp4'
+import video5 from '../../assets/videos/video5.mp4'
 
 export function GridImages() {
-  const { effects: { getAssets } } = useContext(appContext)
+  const { language: { menu, titles }, effects: { getAssets } } = useContext(appContext)
   return (
-    <GridWrapper>
-      <VideoTag controls poster={getAssets('patio1', 'jpeg')} >
-        <source src={video2} type="video/mp4" />
-      </VideoTag>
-      <VideoTag controls poster={getAssets('cocina2', 'jpeg')} >
-        <source src={video1} type="video/mp4" />
-      </VideoTag>
-      <VideoTag controls poster={getAssets('cocina1', 'jpeg')} >
-        <source src={video3} type="video/mp4" />
-      </VideoTag>
-      <VideoTag controls poster={getAssets('piscina', 'jpeg')} >
-        <source src={video4} type="video/mp4" />
-      </VideoTag>
-    </GridWrapper>
+    <>
+      <TextDescriptivo>{titles[1]}</TextDescriptivo>
+      <GridWrapper id={menu[1]}>
+        <VideoTag controls poster={getAssets('patio1', 'jpeg')} >
+          <source src={video2} type="video/mp4" />
+        </VideoTag>
+        <VideoTag controls poster={getAssets('imgVideo7', 'jpeg')} >
+          <source src={video7} type="video/mp4" />
+        </VideoTag>
+        <VideoTag controls poster={getAssets('imgvideo5', 'jpeg')} >
+          <source src={video5} type="video/mp4" />
+        </VideoTag>
+        <VideoTag controls poster={getAssets('imgVideo6', 'jpeg')} >
+          <source src={video6} type="video/mp4" />
+        </VideoTag>
+      </GridWrapper>
+    </>
   )
 }
