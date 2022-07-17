@@ -26,8 +26,7 @@ export const ContextProvider = ({ children }) => {
     getAssets('piscina', 'jpeg'),
     getAssets('cocina1', 'jpeg'),
     getAssets('cocina2', 'jpeg'),
-    getAssets('patio1', 'jpeg'),
-    getAssets('cuarto1', 'jpeg')
+    getAssets('patio1', 'jpeg')
   ]
 
   const effects = () => ({

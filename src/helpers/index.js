@@ -1,5 +1,5 @@
 export function getTheme() {
-  return localStorage.getItem('color-theme')
+  return localStorage.getItem('color-theme') || false
 }
 
 export function setTheme(newTheme) {
@@ -14,7 +14,6 @@ export function fadeInAnimation() {
   setTimeout(() => theme.classList?.add('theme--animation'), 300)
 }
 
-
 export function toogleTheme() {
   const newTheme = getTheme() === 'dark' ? 'light' : 'dark'
 
@@ -26,6 +25,8 @@ export function toogleTheme() {
   // default preferred browser theme
   const preferredTheme = window.matchMedia('(prefers-color-scheme: light)').matches && 'light'
 
+  const theme = getTheme() || preferredTheme || 'dark'
+
   // Set the theme between the chosen one, preferred browser one or "dark" by default
-  setTheme(getTheme() || preferredTheme || 'dark')
+  setTheme(theme)
 })()

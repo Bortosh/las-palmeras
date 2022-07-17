@@ -12,7 +12,7 @@ export const MasterWrapper = styled.div.attrs({
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #2F3033;
+    background-color: var(--bg-color);
     overflow: hidden;
     width: 100%;
 `
@@ -29,7 +29,7 @@ export const MainWrapper = styled.div.attrs({
     @media (max-width: 720px) {
         position: fixed;
         z-index: 800;
-        background-color: #2F3033;
+        background-color: var(--bg-color);
     }
 `
 
@@ -106,7 +106,7 @@ export const WhatsappWrapper = styled.a.attrs({
 })`
     display: flex;
     align-items: center;
-    color: #2F3033;
+    color: var(--bg-color);
     position: fixed;
     right: 2vw;
     bottom: 2vh;
@@ -149,7 +149,7 @@ export const WrapperAbout = styled.div.attrs({
     align-items: center;
     width: 1200px;
     width: 100%;
-    background-color: #2F3033;
+    background-color: var(--bg-color);
 `
 
 export const SliderEdges = styled.div.attrs({
@@ -199,7 +199,7 @@ export const WrapperAboutDescription = styled.div.attrs({
     padding: 60px 20px;
     max-width: 1200px;
     font-size: 18px;
-    color: #f2f2f2;
+    color: var(--text-color);
     gap: 1rem;
     display: flex;
     flex-direction: column;
@@ -274,7 +274,7 @@ export const MapWrapper = styled.iframe.attrs({
 export const FooterImg = styled.img.attrs({
   className: '| FooterImg |'
 })`
-    background-color: #2F3033;
+    background-color: var(--bg-color);
     width: 200px;
     margin-top: 40px;
 `
@@ -380,7 +380,7 @@ export const ThemeButtonWrapper = styled.div.attrs({
   display: flex;
   align-items: center;
   gap: 16px;
-  border: 2px solid #f2f2f2;
+  border: 2px solid var(--text-color);
   border-radius: 30px;
   padding-left: 40px;
   padding-right: 16px;
@@ -405,7 +405,7 @@ export const ThemeImg = styled.img.attrs({
     height: 20px;
     cursor: pointer;
     border-radius: 50%;
-    border: 3px solid #f2f2f2;
+    border: 3px solid var(--text-color);
     padding: 4px;
     box-sizing: initial;
     position: absolute;
@@ -425,7 +425,7 @@ export const SelectWrapper = styled.div.attrs({
     gap: 2rem;
 
     .css-qc6sy-singleValue {
-        color: #f2f2f2;
+        color: var(--text-color);
     }
 
     .css-1s2u09g-control,
@@ -449,16 +449,16 @@ export const SelectWrapper = styled.div.attrs({
     }
 
     .css-tlfecz-indicatorContainer {
-        color: #f2f2f2;
+        color: var(--text-color);
     }
 
     .css-1gtu0rj-indicatorContainer {
-        color: #f2f2f2;
+        color: var(--text-color);
     }
 
     .css-26l3qy-menu {
       div {
-          background-color: #2F3033;
+          background-color: var(--bg-color);
           padding: 5px;
         }
     }
@@ -479,7 +479,7 @@ export const SelectWrapper = styled.div.attrs({
 export const TextDescriptivo = styled.h2.attrs({
   className: '| TextDescriptivo |'
 })`
-  color: #f2f2f2;
+  color: var(--text-color);
   border-bottom: 1px solid #1c0d02;
   margin-bottom: -30px;
   padding-top: 120px;
@@ -490,5 +490,5 @@ export const Direccion = styled.h2.attrs({
 })`
   margin-top: 0px;
   padding-bottom: 20px;
-  color: #f2f2f2;
+  color: var(--text-color);
 `

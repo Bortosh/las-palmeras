@@ -31,11 +31,11 @@ body {
   background-color: #2F3033;
 }
 
-#root{
+/* #root{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 /**
  * Render the `main` element consistently in IE.
@@ -361,13 +361,26 @@ template {
   display: none;
 }
 
-.theme {
-	opacity: 0;
-    visibility: hidden;
+:root[data-color-theme=dark] {
+  --text-color: #f2f2f2;
+  --bg-color: #2F3033;
+}
 
-	&--animation {
-		opacity: 1 !important;
-		transition: all 500ms linear;
-		visibility: visible !important;
-	}
+:root[data-color-theme=light] {
+  --text-color: #2F3033;
+  --bg-color: #E5E5E5;
+}
+
+.theme {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.theme--animation {
+  opacity: 1 !important;
+  transition: all 500ms linear;
+  visibility: visible !important;
 }
