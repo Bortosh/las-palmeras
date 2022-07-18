@@ -362,7 +362,7 @@ export const ModalWrapper = styled.div.attrs({
 })`
     position: fixed;
     width: 60%;
-    height: 80%;
+    height: 100%;
     z-index: 1200;
     bottom: 50%;
     transform: translateY(50%);
@@ -377,7 +377,7 @@ export const ModalImg = styled.img.attrs({
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background-color: red;
+    background-color: opacity;
 `
 
 export const ThemeButtonWrapper = styled.div.attrs({

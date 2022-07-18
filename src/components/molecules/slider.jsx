@@ -12,10 +12,10 @@ export const Slider = () => {
   const handleOpen = () => setShowModal(true)
 
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => handleNext(), 5000);
-  //   return () => clearTimeout(timer)
-  // }, [handleNext])
+  useEffect(() => {
+    const timer = setTimeout(() => handleNext(), 5000);
+    return () => clearTimeout(timer)
+  }, [handleNext])
 
   const prevIndex = index ? index - 1 : spritesLength - 1
   const nextIndex = index === spritesLength - 1 ? 0 : index + 1
