@@ -13,6 +13,8 @@ export function Modal() {
 		setImgToShow(carruselImages[index])
 	}, [carruselImages, index, showModal])
 
+	// const responsiveModal = window.innerWidth >= 769 ? imgToShow : setShowModal(false)
+
 	return (
 		showModal && (
 			<>

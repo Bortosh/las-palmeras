@@ -371,7 +371,12 @@ export const ModalWrapper = styled.div.attrs({
     box-sizing: border-box;
     overflow: hidden;
     @media (max-width: 768px) {
-      height: 30%;
+      max-width: 700px;
+      width: 100%;
+      max-height: 550px;
+      height: 100%;
+      background-color: transparent;
+      object-fit: cover;
     }
 `
 
