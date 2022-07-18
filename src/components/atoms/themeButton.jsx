@@ -17,19 +17,22 @@ export function ThemeButton() {
   }, [])
 
   const moonIcon = getAssets('moon')
+  const darkMoonIcon = getAssets('darkMoon')
   const sunIcon = getAssets('sun')
 
   const darkTheme = themePage === 'dark'
 
   const icon = darkTheme ? moonIcon : sunIcon
 
+  const icon2 = darkTheme ? darkMoonIcon : sunIcon
+
   const btnText = darkTheme ? 'Off' : 'On'
 
-  // const responsiveImg = window.innerWidth >= 769 ? getAssets('palms_white') : imgToShow
+  const responsiveIcon = window.innerWidth >= 769 ? icon : icon2
 
   return (
-    <ThemeButtonWrapper src={icon} alt='theme icon'>
-      <ThemeImg onClick={triggerRender} src={icon} alt='theme icon' />
+    <ThemeButtonWrapper src={responsiveIcon} alt='theme icon'>
+      <ThemeImg onClick={triggerRender} src={responsiveIcon} alt='theme icon' />
       <p>{btnText}</p>
     </ThemeButtonWrapper>
   )

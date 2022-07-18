@@ -208,7 +208,8 @@ export const WrapperAboutDescription = styled.div.attrs({
     display: flex;
     flex-direction: column;
     p {
-      margin: 0
+      margin: 0;
+      line-height: 30px;
     }
 `
 
@@ -361,7 +362,7 @@ export const ModalWrapper = styled.div.attrs({
 })`
     position: fixed;
     width: 60%;
-    height: 90%;
+    height: 80%;
     z-index: 1200;
     bottom: 50%;
     transform: translateY(50%);
@@ -375,7 +376,8 @@ export const ModalImg = styled.img.attrs({
 })`
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: red;
 `
 
 export const ThemeButtonWrapper = styled.div.attrs({
@@ -419,6 +421,7 @@ export const ThemeImg = styled.img.attrs({
     @media (max-width: 720px) {
         width: 14px;
         height: 14px;
+        border: 3px solid var(--bg-color2);
   }
 `
 
