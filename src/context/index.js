@@ -9,7 +9,7 @@ export const ContextProvider = ({ children }) => {
   const setDefaultLang = lang => localStorage.setItem('lang', lang)
   const theme = getTheme()
 
-  const [locale, setLocale] = useState(defaultLang || 'es')
+  const [locale, setLocale] = useState('es' || defaultLang)
   const [index, setIndex] = useState(0)
   const [showModal, setShowModal] = useState(false)
   const [themePage, setThemePage] = useState(getTheme())
