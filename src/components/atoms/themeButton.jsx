@@ -1,29 +1,36 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { appContext } from '../../context'
 import { ThemeButtonWrapper, ThemeImg } from '../style'
-import { getTheme, toogleTheme } from '../../helpers';
 
 export function ThemeButton() {
-  const { effects: { getAssets } } = useContext(appContext)
+  const { themePage, effects: { getAssets, changeTheme } } = useContext(appContext)
 
   const [change, setChange] = useState(false)
 
   const triggerRender = () => {
     setChange(!change)
-    toogleTheme()
+    changeTheme()
   }
+
+  useEffect(() => {
+    triggerRender()
+  }, [])
 
   const moonIcon = getAssets('moon')
   const sunIcon = getAssets('sun')
 
-  const darkTheme = getTheme() === 'dark'
+  const darkTheme = themePage === 'dark'
 
   const icon = darkTheme ? moonIcon : sunIcon
+
+  const btnText = darkTheme ? 'Off' : 'On'
+
+  // const responsiveImg = window.innerWidth >= 769 ? getAssets('palms_white') : imgToShow
 
   return (
     <ThemeButtonWrapper src={icon} alt='theme icon'>
       <ThemeImg onClick={triggerRender} src={icon} alt='theme icon' />
-      <p>{darkTheme ? 'Off' : 'On'}</p>
+      <p>{btnText}</p>
     </ThemeButtonWrapper>
   )
 }

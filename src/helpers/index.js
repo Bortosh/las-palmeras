@@ -2,6 +2,10 @@ export function getTheme() {
   return localStorage.getItem('color-theme') || false
 }
 
+export function newTheme() { 
+  return getTheme() === 'dark' ? 'light' : 'dark'
+}
+
 export function setTheme(newTheme) {
   localStorage.setItem('color-theme', newTheme)
   document.documentElement?.setAttribute('data-color-theme', newTheme)
@@ -15,9 +19,7 @@ export function fadeInAnimation() {
 }
 
 export function toogleTheme() {
-  const newTheme = getTheme() === 'dark' ? 'light' : 'dark'
-
-  setTheme(newTheme)
+  setTheme(newTheme())
   fadeInAnimation()
 }
 

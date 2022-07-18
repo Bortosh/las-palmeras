@@ -362,13 +362,15 @@ template {
 }
 
 :root[data-color-theme=dark] {
-  --text-color: #f2f2f2;
+  --text-color: #E5E5E5;
   --bg-color: #2F3033;
+  --bg-color2: #E5E5E5;
 }
 
 :root[data-color-theme=light] {
   --text-color: #2F3033;
   --bg-color: #E5E5E5;
+  --bg-color2: #2F3033;
 }
 
 .theme {

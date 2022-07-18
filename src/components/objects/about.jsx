@@ -3,15 +3,15 @@ import { appContext } from '../../context'
 import { WrapperAbout, WrapperAboutDescription, TextDescriptivo } from '../style'
 
 export function About() {
-  const { language: { menu, description, titles } } = useContext(appContext)
+  const { language: { menu, description } } = useContext(appContext)
   return (
     <WrapperAbout id={menu[0]}
-        data-aos="fade-left"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out">
-      <TextDescriptivo>{titles[0]}</TextDescriptivo>
+      data-aos="zoom-in"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <WrapperAboutDescription>
         {description.map((item, index) =>
           <p key={index}>{item}</p>

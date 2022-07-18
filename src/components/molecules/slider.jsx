@@ -11,7 +11,6 @@ export const Slider = () => {
 
   const handleOpen = () => setShowModal(true)
 
-  
 
   useEffect(() => {
     const timer = setTimeout(() => handleNext(), 5000);

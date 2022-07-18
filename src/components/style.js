@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 export const Theme = styled.div.attrs({
 	className: 'theme theme--animation',
-})``;
+})`
+  background-color: var(--bg-color);
+`;
 
 export const MasterWrapper = styled.div.attrs({
   className: '| MasterWrapper |'
@@ -12,7 +14,7 @@ export const MasterWrapper = styled.div.attrs({
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--bg-color);
+    background-color: #2F3033;
     overflow: hidden;
     width: 100%;
 `
@@ -65,6 +67,7 @@ export const MainBar = styled.ul.attrs({
     @media (max-width: 720px) {
         gap: 0.5rem;
         width: 100%;
+        color: var(--text-color);
         justify-content: space-between;
         li {
           font-size: 22px;
@@ -95,9 +98,10 @@ export const NavBar = styled.nav.attrs({
     }
 
     @media (max-width: 720px) {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--bg-color);
+      padding: 1rem;
     }
 `
 
@@ -111,7 +115,7 @@ export const WhatsappWrapper = styled.a.attrs({
     right: 2vw;
     bottom: 2vh;
     border-radius: 50px;
-    background-color: #E5E5E5;
+    background-color: var(--bg-color2);
     padding: 4px 20px;
     gap: 12px;
     text-decoration: none;
@@ -282,7 +286,7 @@ export const FooterImg = styled.img.attrs({
 export const FooterWrapper = styled.div.attrs({
   className: '| FooterWrapper |'
 })`
-    color: white;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -302,6 +306,7 @@ export const GridWrapper = styled.div.attrs({
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
     max-width: 1200px;
+    background-color: var(--bg-color);
     width: 100%;
     padding: 60px 20px;
     @media (max-width: 768px) {
@@ -357,7 +362,6 @@ export const ModalWrapper = styled.div.attrs({
     position: fixed;
     width: 60%;
     height: 90%;
-    background-color: #2F303370;
     z-index: 1200;
     bottom: 50%;
     transform: translateY(50%);
@@ -380,7 +384,7 @@ export const ThemeButtonWrapper = styled.div.attrs({
   display: flex;
   align-items: center;
   gap: 16px;
-  border: 2px solid var(--text-color);
+  border: 2px solid #E5E5E5;
   border-radius: 30px;
   padding-left: 40px;
   padding-right: 16px;
@@ -392,6 +396,7 @@ export const ThemeButtonWrapper = styled.div.attrs({
   @media (max-width: 720px) {
     padding-left: 32px;
     padding-right: 14px;
+    border: 2px solid var(--bg-color2);
     p {
       font-size: 22px;
     }
@@ -405,7 +410,7 @@ export const ThemeImg = styled.img.attrs({
     height: 20px;
     cursor: pointer;
     border-radius: 50%;
-    border: 3px solid var(--text-color);
+    border: 3px solid #f2f2f2;
     padding: 4px;
     box-sizing: initial;
     position: absolute;
@@ -425,7 +430,7 @@ export const SelectWrapper = styled.div.attrs({
     gap: 2rem;
 
     .css-qc6sy-singleValue {
-        color: var(--text-color);
+        ${({variant}) => window.innerWidth >= 769 ? 'color: #E5E5E5;' : 'color: var(--text-color);'}
     }
 
     .css-1s2u09g-control,
@@ -449,16 +454,16 @@ export const SelectWrapper = styled.div.attrs({
     }
 
     .css-tlfecz-indicatorContainer {
-        color: var(--text-color);
+      ${({variant}) => window.innerWidth >= 769 ? 'color: #E5E5E5;' : 'color: var(--text-color);'}
     }
 
     .css-1gtu0rj-indicatorContainer {
-        color: var(--text-color);
+        color: #f2f2f2;
     }
 
     .css-26l3qy-menu {
       div {
-          background-color: var(--bg-color);
+          background-color: #2F3033;
           padding: 5px;
         }
     }
@@ -476,16 +481,7 @@ export const SelectWrapper = styled.div.attrs({
     }
 `
 
-export const TextDescriptivo = styled.h2.attrs({
-  className: '| TextDescriptivo |'
-})`
-  color: var(--text-color);
-  border-bottom: 1px solid #1c0d02;
-  margin-bottom: -30px;
-  padding-top: 120px;
-`
-
-export const Direccion = styled.h2.attrs({
+export const Direccion = styled.a.attrs({
   className: '| Direccion |'
 })`
   margin-top: 0px;

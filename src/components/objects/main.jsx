@@ -6,11 +6,15 @@ import { Slider } from '../molecules'
 import { MainBar, MainImg, MainWrapper, NavBar, BackgroundImg, MasterWrapper, SelectWrapper } from '../style'
 
 export function Main() {
-  const { language: { menu }, locale, index, carruselImages, effects: { getAssets, setLanguage } } = useContext(appContext)
+  const { imgToShow, themePage, language: { menu }, locale, index, carruselImages, effects: { getAssets, setLanguage, setImgToShow } } = useContext(appContext)
 
   const [imageToRender, setImageToRender] = useState(carruselImages[0])
 
   useEffect(() => { setImageToRender(carruselImages[index]) }, [carruselImages, index])
+
+  useEffect(() => {
+    setImgToShow(getAssets( themePage === 'dark' ? 'palms_black' : 'palms_white'))
+  }, [themePage])
 
   const option = [
     { value: 'en', label: 'US' },
@@ -21,13 +25,15 @@ export function Main() {
 
   const defaultValue = option.filter(item => item.value === locale);
 
+  const responsiveImg = window.innerWidth >= 769 ? getAssets('palms_white') : imgToShow
+
   return (
     <MasterWrapper>
       <BackgroundImg src={imageToRender} />
       <MainWrapper>
         <NavBar>
           <a href='#'>
-            <MainImg src={getAssets('palms_white')} />
+            <MainImg src={responsiveImg} />
           </a>
           <MainBar>
             {menu.map((item, index) =>
@@ -44,6 +50,7 @@ export function Main() {
                 defaultValue={defaultValue}
                 onChange={handleLang}
                 isSearchable={false}
+                variant
               />
             </SelectWrapper>
             <ThemeButton />
