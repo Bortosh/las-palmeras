@@ -153,6 +153,7 @@ export const WrapperAbout = styled.div.attrs({
     align-items: center;
     width: 1200px;
     width: 100%;
+    padding-top: 20px;
     background-color: var(--bg-color);
 `
 
@@ -239,10 +240,10 @@ export const SliderImg = styled.img.attrs({
     max-width: 100%;
     width: 100%;
     &:nth-child(1) {
-      background-color: red;
+      background-color: opacity;
     }
     &:nth-child(3) {
-      background-color: blue;
+      background-color: opacity;
     }
 
     @media (max-width: 480px) {
@@ -369,6 +370,9 @@ export const ModalWrapper = styled.div.attrs({
     border-radius: 4px;
     box-sizing: border-box;
     overflow: hidden;
+    @media (max-width: 768px) {
+      height: 30%;
+    }
 `
 
 export const ModalImg = styled.img.attrs({
@@ -467,7 +471,7 @@ export const SelectWrapper = styled.div.attrs({
     .css-26l3qy-menu {
       div {
           background-color: #2F3033;
-          padding: 5px;
+          padding: 1px;
         }
     }
 

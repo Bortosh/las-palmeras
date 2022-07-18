@@ -31,8 +31,8 @@ export function ThemeButton() {
   const responsiveIcon = window.innerWidth >= 769 ? icon : icon2
 
   return (
-    <ThemeButtonWrapper src={responsiveIcon} alt='theme icon'>
-      <ThemeImg onClick={triggerRender} src={responsiveIcon} alt='theme icon' />
+    <ThemeButtonWrapper src={responsiveIcon} alt='theme icon' onClick={triggerRender}>
+      <ThemeImg src={responsiveIcon} alt='theme icon' />
       <p>{btnText}</p>
     </ThemeButtonWrapper>
   )
