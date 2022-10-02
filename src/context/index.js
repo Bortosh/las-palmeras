@@ -37,9 +37,19 @@ export const ContextProvider = ({ children }) => {
 
   const carruselImages = [
     getAssets('piscina', 'jpeg'),
-    getAssets('cocina1', 'jpeg'),
+    getAssets('patio-grande', 'jpeg'),
+    getAssets('piscina-azul', 'jpeg'),
+    getAssets('baño-afuera', 'jpeg'),
+    getAssets('salon-fiesta', 'jpeg'),
+    getAssets('patio1', 'jpeg'),
     getAssets('cocina2', 'jpeg'),
-    getAssets('patio1', 'jpeg')
+    getAssets('cocina1', 'jpeg'),
+    getAssets('cocina-afuera', 'jpeg'),
+    getAssets('cocina-casa', 'jpeg'),
+    getAssets('comedor', 'jpeg'),
+    getAssets('cuarto-cama', 'jpeg'),
+    getAssets('cuarto-literas', 'jpeg'),
+    getAssets('cuarto-cama-bonita', 'jpeg')
   ]
 
   const effects = () => ({
