@@ -36,9 +36,13 @@ export const ContextProvider = ({ children }) => {
   const getAssets = (name, format = 'png') => require(`../assets/${name}.${format}`)
 
   const carruselImages = [
-    getAssets('piscina', 'jpeg'),
-    getAssets('patio-grande', 'jpeg'),
     getAssets('piscina-azul', 'jpeg'),
+    getAssets('piscina', 'jpeg'),
+    getAssets('fincapalmerasfoto4', 'jpeg'),
+    getAssets('fincapalmerasfoto1', 'jpeg'),
+    getAssets('fincapalmerasfoto2', 'jpeg'),
+    getAssets('fincapalmerasfoto3', 'jpeg'),
+    getAssets('patio-grande', 'jpeg'),
     getAssets('baño-afuera', 'jpeg'),
     getAssets('salon-fiesta', 'jpeg'),
     getAssets('patio1', 'jpeg'),
