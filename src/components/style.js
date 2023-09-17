@@ -317,6 +317,26 @@ export const GridWrapper = styled.div.attrs({
     }
 `
 
+export const GridWrapperEvent = styled.div.attrs({
+  className: '| GridWrapper |'
+})`
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas, una para cada elemento */
+  grid-gap: 20px; /* Espacio entre los elementos */
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+  }
+`
+
+
+
 export const GridImagesWrapper = styled.img.attrs({
   className: '| GridImagesWrapper |'
 })`

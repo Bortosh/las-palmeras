@@ -5,6 +5,7 @@ import { ContextProvider } from './context';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import { Theme } from './components/style';
+import Event from './components/objects/Event';
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
         <Main />
         <About />
         <GridImages />
+        <Event />
         <Map />
         <Footer />
         <Whatsapp />

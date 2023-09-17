@@ -13,7 +13,7 @@ export function Main() {
   useEffect(() => { setImageToRender(carruselImages[index]) }, [carruselImages, index])
 
   useEffect(() => {
-    setImgToShow(getAssets( themePage === 'dark' ? 'palms_black' : 'palms_white'))
+    setImgToShow(getAssets(themePage === 'dark' ? 'palms_black' : 'palms_white'))
   }, [themePage])
 
   const option = [
@@ -29,11 +29,11 @@ export function Main() {
 
   return (
     <MasterWrapper>
-      <BackgroundImg src={imageToRender} />
+      <BackgroundImg src={imageToRender} alt='imagen1' />
       <MainWrapper>
         <NavBar>
           <a href='#'>
-            <MainImg src={responsiveImg} />
+            <MainImg src={responsiveImg} alt='imagen2'/>
           </a>
           <MainBar>
             {menu.map((item, index) =>
